@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EYELINEAR.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color: #FDECEF;">
+    
+        <div class="container-fluid " style="background-color: #F3E1E1;">
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="{{ url_for('static', filename='logooo.jpeg')}}" alt="LOGO" style="width: 50px; height: 50px;  " class="rounded-pill">
+                    </a>
+                    <ul class="navbar-nav mx-auto">
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                FACE
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Face Wash</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Moisturizer</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Serum</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Sunscreen</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                MAKEUP
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}"> Foundation</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Lipstick</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Kajal</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Eyelinear</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                HAIR
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Shampoo</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Conditioner</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Hair oil</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Hair Serum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                BODY
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Body lotion</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Body wash</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Soap</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--Ithu la iruthi search box vaika -->
+                    <ul class="navbar-nav">
+                            <form class="d-flex">
+                                <input class="form control me-2" type="text-4" placeholder="Search">
+                                <button class="btn btn-primary" type="button">
+                                    Search
+                                </button>
+                            </form>
+                        
+                        
+                            <li class="navbar-item">
+                                <a class="nav-link" href="{{url_for('create')}}">ACCOUNT</a>
+                            </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card custom-card">
+                    <img src="{{url_for('static', filename='eyelinearmain4.jpg')}}" class="card-img-top">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h1 class="text-center display-1" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        EYELINEAR
+                    </h1>
+                    <p style="font-size: 170%;">MARS Creamy Matte Long Lasting Lipstick for Women | Creamy Lipstick | Single Swipe Application | Smooth & Light Weight (3.2 gm) (09-Bollywood Surprise)</p><div></div>
+                    <a href="https://www.amazon.in/stores/Mars/page/850C2810-A014-41ED-A539-D423E1F46DA7?lp_asin=B0BPS4PHFK&ref_=ast_bln" style="text-decoration: none;">Visit the MARS Store</a>
+                    <p class="fw-bold" style="font-size: xx-large;"> USES</p>
+                    <ul  style="font-size:150%; font-family: Arial, Helvetica, sans-serif;">
+                        <li>Eyeliner helps define the shape of the eyes, making them look sharper and more expressive.</li>
+                        <li>It can make eyes appear bigger, longer, or more lifted depending on how it is applied.</li>
+                        <li>Eyeliner adds depth to the eyes, giving a bold or dramatic look for both daily and party makeup.</li>
+                        <li>It brings together eyeshadow and mascara, giving the eyes a finished and polished appearance.</li>
+                    </ul>
+                    <p style="font-size: medium; color:red;">-50% OFF<div style="font-size: xx-large;">₹250.00</p>
+                    <p class="text-muted" style="font-size: medium;">MRP <del>500</del></p>
+                    <div class="input-group rounded-pill border border-dark" style="width:150px; background-color: white;">
+                        <button class="btn border-0 px-3">−</button>
+                        <input type="text" class="form-control text-center border-0 fw-bold" value="1" readonly>
+                        <button class="btn border-0 px-3">+</button> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+</body>
+</html>

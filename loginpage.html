@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGINPAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image: url("/static/loginpage.jpg");
+            background-size: 100%;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <form style="text-align: center; padding-top: 250px;"
+                            method="POST"
+                            action="/new">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            
+                <div class="card glass-card text-center shadow" style = "width:400px; background-color: rgba(255, 255, 255, 0.325);">
+                    
+                        
+                            <div class="card-body">
+                                <h1 class="card-title" style="color: black; ">LOGINPAGE</h1>
+                                <div class="pt-4">
+                                <label class="form-label" >USERNAME:</label>
+                                <input type="text"  name="username" placeholder="Enter the name">
+                                </div>
+                                <div class="pt-4">
+                                <label class="form-label">PASSWORD:</label>
+                                <input type="password" name="password" placeholder="Enter the password"></div>
+                                <div class="pt-4">
+                                <button type="login" class="btn btn-primary">
+                                    LOGIN
+                                </button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            
+        </div> 
+    </form>
+</body>
+</html>

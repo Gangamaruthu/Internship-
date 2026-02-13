@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image: url("/static/signpage.jpg");
+            background-size: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="col-md-6 col-lg-5">
+
+    <form class="border p-4 rounded shadow bg-opacity-50"
+              method="POST"
+              action="/create" >
+      <h2 class="text-center mb-4">CREATE ACCOUNT</h2>
+
+      <!-- Firstname -->
+      <div class="mb-3">
+        <label class="form-label">Firstname</label>
+        <input type="text" class="form-control" name="firstname" placeholder="Enter the firstname">
+      </div>
+
+      <!-- Lastname -->
+      <div class="mb-3">
+        <label class="form-label">Lastname</label>
+        <input type="text" class="form-control" name="lastname" placeholder="Enter the lastname">
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Mail ID</label>
+        <input type="email" class="form-control" name = "mail_id" placeholder="Enter the mail ID">
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Enter the password">
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="mb-4">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" name="confirm_password" placeholder="Enter the confirm password">
+      </div>
+
+      <!-- Button -->
+      <div class="d-grid">
+        <button type="signup" class="btn btn-primary">
+          Signup
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+    
+
+</body>
+</html>

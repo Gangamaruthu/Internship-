@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .logo-track img{
+            height: 70px;
+            margin: 0 40px;
+            object-fit: contain;
+        }
+        @keyframes marquee{
+            from{transform: translateX(0);}
+            to{transform: translateX(-50%);}
+        }
+        
+        
+    </style>
+</head>
+<body style="
+  background-color: #FDECEF;
+">
+    <!--only for navigation bar-->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{{url_for('new')}}">
+                        <img src="{{ url_for('static', filename='logooo.jpeg')}}" alt="LOGO" style="width: 50px; height: 50px;  " class="rounded-pill">
+
+                    </a>
+                    
+                    <ul class="navbar-nav mx-auto">
+                        <!--dropdown ithu la iruthu use pannuvom-->
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                FACE
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Face Wash</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Moisturizer</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Serum</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Sunscreen</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                MAKEUP
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}"> Foundation</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Lipstick</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Kajal</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Eyelinear</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                HAIR
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Shampoo</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Conditioner</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"href="{{url_for('logo')}}">Hair oil</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Hair Serum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item dropdown mx-2">
+                            <a class="nav-link dropdown hover-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+                                BODY
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Body lotion</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Body wash</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{url_for('logo')}}">Soap</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--Ithu la iruthi search box vaika -->
+                    <ul class="navbar-nav">
+                            <form class="d-flex">
+                                <input class="form control me-2" type="text-4" placeholder="Search">
+                                <button class="btn btn-primary" type="button">
+                                    Search
+                                </button>
+                            </form>
+                        
+                        
+                            <li class="navbar-item">
+                                <a class="nav-link" href="{{url_for('create')}}">ACCOUNT</a>
+                            </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--navigation bar ithula iruthuoda mudiyuthu-->
+
+
+        <!-- Carousel-->
+        <div  class="container-fluid">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <!--Ithula iruthu killa ulla button -->
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3" class="active"></button>
+                </div>
+                <!--images ku intha tag use pannuvom-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{url_for('static',filename='slide6.jpg')}}" alt="Carousal" class="d-block w-100" style="width: 1464px;height: 600px;">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="{{url_for('static', filename='drsheth.webp')}}" alt="Carousal" class="d-block w-100" style="width: 1500px;height: 600px;">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{url_for('static', filename='derma.jpeg')}}" alt="Carousal" class="d-block" style="width: 1500px;height: 600px;">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{{url_for('static', filename='nykkaaa.avif')}}" alt="Carousal" class="d-block" style="width: 1500px;height: 600px;">
+                    </div>
+                </div>
+                <!---Ihtula iruthu <> icon varrum -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide-to="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide-to="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!---Carousel ithoda mudiyuthu-->
+
+        <!--Slide for icons-->
+        <div class="container my-5">
+            <div class="logo-runner" style="overflow:hidden; width:100%; padding: 30px 0;">
+                <div class="logo-track" style="display:flex; width:max-content; animation: marquee 25s linear infinite;">
+
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='plix.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='drshethlogo.jpg')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='deconstruct logo.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='lakme-vector-logo.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='dazller logo.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='marslogo.webp')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='The-Derma-Co-Logo.jpg')}}"></a>
+
+                <!-- duplicate -->
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='plix.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='drshethlogo.jpg')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='deconstruct logo.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='lakme-vector-logo.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='dazller logo.png')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='marslogo.webp')}}"></a>
+                <a href="{{url_for('logo')}}"><img src="{{url_for('static', filename='The-Derma-Co-Logo.jpg')}}"></a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- slide image mudiyuthu ithoda-->
+
+        <!--Image and container-->
+        <div class="container-fluid pt-4">
+            <div class="row ">
+                <div class="col-2">
+                    <div class="card custom-card" style="width: 200px;height: 450px;">
+                            <img class="card-img-top" src="{{url_for('static', filename='facewashimgcard.webp')}}" style="width: 200px; height: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    GENTLE DAILY CLEANSER
+                                </h5>
+                                <p class="card-text">
+                                    Removes dirt, oil, and daily impurities without drying the skin. Keeps your face fresh, clean, and healthy every day.</p>
+                                <a href="{{url_for('logo')}}" class="btn">--Shop Now--</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card custom-card" style="width: 200px;height: 450px;">
+                            <img class="card-img-top" src="{{url_for('static',filename='sunscreencardimage.webp')}}" style="width: 200px; height: 200px;">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    SUN PROTECTION CREAM
+                                </h5>
+                                <p class="card-text">
+                                    Protects skin from harmful UVA & UVB rays. Lightweight, non-sticky formula with a natural glow finish.
+                                </p>
+                                <a href="{{url_for('logo')}}" class="btn">--Shop Now--</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card custom-card" style="width: 200px;height: 450px;">
+                        <img class="card-img-top" src="{{url_for('static',filename='haircardimage.avif')}}" style="width: 200px; height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                NOURISHING HAIR OIL
+                            </h5>
+                            <p class="card-text">
+                                Strengthens hair roots and deeply nourishes the scalp.  Helps achieve smooth, shiny, and healthy hair.
+                            </p>
+                            <a href="{{url_for('logo')}}" class="btn">--Shop Now--</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card custom-card" style="width: 200px;height: 450px;">
+                        <img class="card-img-top" src="{{url_for('static',filename='lipstick card.jpg')}}" style="width: 200px; height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                MATTE  LIP COLOUR
+                            </h5>
+                            <p class="card-text">
+                                Rich, long-lasting colour with a smooth matte finish.  Perfect for both everyday wear and special occasions.
+                            </p>
+                            <a href="{{url_for('logo')}}" class="btn">--Shop Now--</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card custom-card" style="width: 200px; height: 450px;">
+                        <img class="card-img-top" src="{{url_for('static',filename='eyelinearcardimage.webp')}}" style="width: 200px; height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                LIQUID EYELINEAR
+                            </h5>
+                            <p class="card-text">
+                                Delivers sharp, precise lines in a single stroke.  Smudge-proof formula that lasts all day.
+                            </p>
+                            <a href="{{url_for('logo')}}" class="btn">
+                                --Shop Now--
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card custom-card" style="width: 200px; height: 450px;">
+                        <img class="card-img-top" src="{{url_for('static',filename='cardimgserum.webp')}}" style="width: 200px; height: 400px;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                GLOW BOOSTING SERUM
+                            </h5>
+                            <p>
+                                Improves hydrartion and enhances natural skin radiance.  Lightweight formula for healthy, glowing skin.
+                            </p>
+                            <a href="{{url_for('logo')}}" class="btn">--Shop Now--</a>
+                        </div>
+                    </div>
+                </div>
+                            
+                            
+                            
+                    
+            
+            </div>
+
+
+        </div>
+        <!--image and cards la ithula set pannirukan-->
+
+        <div class="container-fluid my-5">
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                    <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">GLOWUP - </h1></div>
+                    <div><h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Skincare & Beauty Essentials</h1></div>
+                    
+                    <div  ><p style="font-size: 200%;" class="pt-5">We are GlowUp, a premium skincare brand offering <a href="mainpage.html" style="color: black;">serums</a> , <a href="mainpage.html" style="color: black;"> moisturizers</a>, <a href="mainpage.html" style="color: black;">sunscreens</a>  and beauty essentials made for healthy, glowing skin.</p></div>
+                    <div><p style="font-size: 200%;" class="pt-3">Featuring trusted ingredients like Vitamin C, Niacinamide, Hyaluronic Acid and more. </p></div>
+                    <div><a href="{{url_for('logo')}}" class="cta-btn" style="text-decoration: none; color: black;">------SHOP NEW ARRIVALS------- </a></div>
+
+                </div>
+                <!--<div class="col-6 " style="background-color: antiquewhite;">
+                    <div class="row " style="padding-left: 50%;">
+                        <img src="sidecolimage2.webp" style="width: 250px; height: 250px;" class="rounded-pill">
+                    </div>
+                    <div class="row" >
+                        <img src="sidecoimage3.webp" style="width: auto; height: auto;" >
+                    </div>
+                    <div class="row" style="padding-left: 50%">
+                        <img src="sidecolimage.jpg" style="width: 250px; height: 250px;" class="rounded-cricle">
+                    </div>-->
+
+                <div class="col-6">
+                    <a href="{{url_for('logo')}}">
+                        <img src="{{url_for('static',filename='nykaaside image.jpg')}}" style="width: 100%;" height="100%">
+                    </a>
+                </div>   
+                
+            </div>
+        </div>
+        
+        <!--Image kula bootstrap use panni text overlay pannurathu-->
+        <div class="container-fluid mt-5 pt-3">
+            <div class="row">
+                <div class="col-6">
+                    <div class="position-relative">
+
+                        <img src="{{url_for('static',filename='purple image side in home.avif')}}" class="img-fluid rounded">
+
+                        <div class="position-absolute top-50 start-50 translate-middle text-white text-center bg-dark bg-opacity-50 p-3 rounded">
+                        <h1 class="fw-bold">Flash Sale</h1>
+                        <p>
+                            Our yearly beauty flash sale is live! Grab irresistible deals on premium cosmetic essentials.
+                        </p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="col-3">
+                        <img src="{{url_for('static',filename='purplebrushsidehome.jpg')}}" style="width: 100%;height: 50%;" class="p-3">
+                        <img src="{{url_for('static',filename='lipsticksideimagein home.jpg')}}" style="width: 100%;height: 50%;" class="p-3">
+                </div>
+                <div class="col-3">
+                    <img src="{{url_for('static',filename='eyelinear sidein home.jpg')}}" style="width: 100%;height: 50%; " class="p-3">
+                    <img src="{{url_for('static',filename='blushimage side in home.jpg')}}" style="width: 100%;height: 50%;" class="p-3">
+                </div>
+            </div>
+        </div>
+
+        <!---image run akum-->
+        <div class="container-fluid my-5">
+            <div class="logo-track" style="overflow:hidden; width:100%; padding: 30px 0;">
+                <div class="logo-track" style="display:flex; width:max-content; animation: marquee 25s linear infinite;"> >
+                <!--images-->
+                <img src="{{url_for('static',filename='cosmaticproduct.avif')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct1.avif')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static',filename='cosmaticproduct2.webp')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct3.jpg')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct4.webp')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct5.png')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct6.jpg')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+
+                <!--duplicate-->
+                <img src="{{url_for('static',filename='cosmaticproduct.avif')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct1.avif')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static',filename='cosmaticproduct2.webp')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct3.jpg')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct4.webp')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct5.png')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                <img src="{{url_for('static', filename='cosmaticproduct6.jpg')}}" class="img-fluid rounded flex-shrink-0" style="width: 280px;">
+                </div> 
+            </div>         
+        </div>
+
+        <hr>
+        <!--icons vaichu pannurathu-->
+        <div class="container-fluid mt-5 p-5">
+            <footer>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com" class="icon"><i class="fab fa-instagram" style="font-size: 150%; color: black;"></i></a>
+                            <a href="https://www.facebook.com" class="icon"><i class="fab fa-facebook" style="font-size: 150%; color: black;"></i></a>
+                            <a href="https://www.whatsapp.com" class="icon"><i class="fab fa-whatsapp" style="font-size: 150%; color: black;"></i></a>
+                            <a href="https://www.x.com" class="icon"><i class="fab fa-twitter" style="font-size: 150%; color: black;"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-6 ">
+                        @ 2021 OldSkool All Rights Reserved. Template by <a href="{{url_for('logo')}}" style="color: black;">Pixel Rocket</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        
+    
+    
+    
+</body>
+</html>
